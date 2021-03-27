@@ -1,0 +1,105 @@
+body {
+    display: flex;
+}
+
+.game-container {
+    width: 500px;
+    height: 730px;
+    position: absolute;
+    left: 100px;
+}
+
+.border-left {
+    width: 100px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+}
+
+.border-right {
+    width: 100px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+    left: 600px;
+}
+
+.border-top {
+    width: 700px;
+    height: 65px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+    top: -50px;
+}
+
+.sky {
+    background-image: url('sky.png');
+    width: 500px;
+    height: 580px;
+    position: absolute;
+}
+
+.ground {
+    background-image: url('ground.png');
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top:  580px;
+    z-index: +1;
+    animation: groundMove 4s linear infinite;
+    background-repeat: repeat-x;
+    line-height: 400px;
+}
+
+@keyframes groundMove {
+    from { background-position: 0 0; }
+    to { background-position: -500px 0; }
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.running {
+    animation-play-state: running;
+}
+
+.bird {
+    background-image: url('bird.png');
+    position: absolute;
+    width: 76px;
+    height: 78px;
+}
+
+.obstacle {
+    background-image: url('flowerr.png');
+    width: 97px;
+    height: 269px;
+    position: absolute;
+}
+
+.top-obstacle {
+    background-image: url('flowerr.png');
+    transform: rotate(180deg);
+    width: 97px;
+    height: 269px;
+    position: absolute;
+}
+
+
+.over-announcement {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: purple;
+    font-size: 300%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* .end-screen {
+    display: hidden;
+} */
